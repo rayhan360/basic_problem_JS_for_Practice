@@ -12,4 +12,21 @@ function describeValue(value) {
 }
 
 
-// Q-2
+// Q-2: Bangladesh Weekend Machine
+function getDayType(day){
+    switch (String(day).toLowerCase()){
+        case "friday":
+        case "saturday":
+            return "Weekend";
+        case "sunday":
+        case "monday":
+        case "tuesday":
+        case "wednesday":
+        case "thursday":
+            return "Working Day";
+        default:
+            return "Invalid day";
+    }
+}
+
+console.log(getDayType("programming day"));
