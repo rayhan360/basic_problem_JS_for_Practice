@@ -29,4 +29,18 @@ function getDayType(day){
     }
 }
 
-console.log(getDayType("programming day"));
+// Q-3:Username Gatekeeper
+function validateUsername(username){
+    if (username.length < 4){
+        return "Too Short";
+    }
+    if(username.includes(" ")){
+        return "No Spaces Allowed";
+    }
+    if(username.toLowerCase().includes("admin")){
+        return "Reserved Word";
+    }
+    return "Available";
+}
+
+console.log(validateUsername("admin_rahim"));
